@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমাদের ছোট পৃথিবী ❤️</title>
+    <style>
+        :root { --pink: #ff4d6d; --bg: #fff0f3; }
+        body { margin: 0; background: var(--bg); font-family: 'Arial', sans-serif; text-align: center; color: #333; overflow-x: hidden; }
+
+        /* এন্ট্রান্স স্ক্রিন */
+        #entrance {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--pink); color: white; display: flex;
+            flex-direction: column; justify-content: center; align-items: center;
+            z-index: 100; transition: 0.8s ease-in-out;
+        }
+        #entrance button {
+            padding: 15px 30px; font-size: 18px; border: none;
+            border-radius: 50px; cursor: pointer; background: white; color: var(--pink);
+            font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* মেইন কন্টেন্ট */
+        .header { padding: 40px 20px; background: white; border-bottom: 5px solid var(--pink); }
+        h1 { color: var(--pink); margin: 0; font-size: 24px; }
+
+        .photo-frame { 
+            margin: 20px auto; background: white; padding: 10px; 
+            border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+            display: inline-block; width: 80%; max-width: 300px;
+        }
+        .photo-frame img { width: 100%; border-radius: 10px; }
+
+        #counter-box { margin: 20px auto; padding: 20px; background: white; width: 85%; border-radius: 20px; box-shadow: 0 8px 20px rgba(255, 77, 109, 0.15); }
+        .timer { display: flex; justify-content: space-around; margin-top: 10px; }
+        .timer span { display: block; font-size: 22px; color: var(--pink); font-weight: bold; }
+
+        .card { background: white; margin: 15px; padding: 20px; border-radius: 20px; text-align: left; border-left: 5px solid var(--pink); }
+        
+        /* মিউজিক প্লেলিস্ট */
+        .playlist { background: white; padding: 20px; margin: 20px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .song-link {
+            display: block; text-decoration: none; color: #333;
+            background: #fff0f3; margin: 10px 0; padding: 12px;
+            border-radius: 10px; font-size: 14px; transition: 0.3s;
+        }
+        .song-link:hover { background: var(--pink); color: white; }
+
+        .heart { position: fixed; color: var(--pink); z-index: -1; animation: float 4s linear infinite; }
+        @keyframes float { to { transform: translateY(-100vh); opacity: 0; } }
+    </style>
+</head>
+<body>
+
+    <div id="entrance">
+        <div style="font-size: 50px; margin-bottom: 20px;">🐣</div>
+        <h2 style="margin-bottom: 30px;">শুধুমাত্র আমার পাখির জন্য...</h2>
+        <button onclick="enterSite()">এখানে টাচ করো ❤️</button>
+    </div>
+
+    <div class="header">
+        <h1>আমাদের ছোট পৃথিবী ❤️</h1>
+        <p>আমার সবথেকে আদরের পাখি ,আমার বিল্লি 🙈</p>
+    </div>
+
+    <div class="photo-frame">
+        <img src="selfie.jpg" alt="আমাদের সেলফি">
+        <p style="margin-top: 10px; font-style: italic; color: #ff4d6d;">"আমাদের সেই সুন্দর মুহূর্ত 😊"</p>
+    </div>
+
+    <div id="counter-box">
+        <p style="font-weight: bold;">একসাথে পথচলা শুরু থেকে...</p>
+        <div class="timer">
+            <div><span id="days">0</span>দিন</div>
+            <div><span id="hours">0</span>ঘণ্টা</div>
+            <div><span id="mins">0</span>মিনিট</div>
+        </div>
+    </div>
+
+    <div class="memory-container">
+        <div class="card">
+            <h3>প্রথম দেখা 🎓</h3>
+            <p>৮ই অক্টোবর, ২০২৩। কলেজের ক্লাসের ফাঁকে তোমাকে প্রথম দেখা। সেই শুরু...</p>
+        </div>
+        <div class="card">
+            <h3>হেঁটে চলা স্মৃতি 👣</h3>
+            <p>কলেজ শেষে দুজনে মিলে সেই হাঁটাহাঁটি আর দাঁড়িয়ে কতশত কথা বলা—সব আজও মনে পড়ে।</p>
+        </div>
+    </div>
+
+    <div class="playlist">
+        <h3 style="color: #c9184a;">আমাদের পছন্দের গানগুলো 🎶</h3>
+        <a href="https://www.youtube.com/results?search_query=tanveer+evan+obhiman" target="_blank" class="song-link">🎵 তানভীর ইভান - অভিমান</a>
+        <a href="https://www.youtube.com/results?search_query=arijit+singh+tum+hi+ho" target="_blank" class="song-link">🎵 অরিজিৎ সিং - তুম হি হো</a>
+        <a href="https://www.youtube.com/results?search_query=tanveer+evan+maya" target="_blank" class="song-link">🎵 তানভীর ইভান - মায়া</a>
+        <a href="https://www.youtube.com/results?search_query=arijit+singh+jaan+nisaar" target="_blank" class="song-link">🎵 অরিজিৎ সিং - জান নিসার</a>
+    </div>
+
+    <script>
+        // এন্ট্রান্স ফাংশন
+        function enterSite() {
+            document.getElementById('entrance').style.top = '-100%';
+        }
+
+        // তারিখ: 2023 October 8
+        const startDate = new Date(2023, 0, 8);
+
+        function updateTimer() {
+            const diff = new Date() - startDate;
+            document.getElementById('days').innerText = Math.floor(diff / (1000*60*60*24));
+            document.getElementById('hours').innerText = Math.floor((diff / (1000*60*60)) % 24);
+            document.getElementById('mins').innerText = Math.floor((diff / (1000*60)) % 60);
+        }
+        setInterval(updateTimer, 1000);
+
+        function createHeart() {
+            const h = document.createElement('div');
+            h.classList.add('heart');
+            h.innerHTML = '❤️';
+            h.style.left = Math.random() * 100 + 'vw';
+            h.style.bottom = '0';
+            h.style.fontSize = Math.random() * 20 + 10 + 'px';
+            document.body.appendChild(h);
+            setTimeout(() => h.remove(), 4000);
+        }
+        setInterval(createHeart, 400);
+    </script>
+</body>
+</html>
